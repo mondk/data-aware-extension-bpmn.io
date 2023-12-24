@@ -10,9 +10,27 @@ Try it on the [classic booking example](https://bpmn-io.github.io/bpmn-js-token-
 
 
 
-## Tutorial
+## Overview
 
-Upon startup all the standard bpmn.io functions are avaliable, the new addition the data task, is no usable untill
+Upon startup all the standard bpmn.io functions are avaliable and layout is the same as the standard bpmn.io, except these new buttons. 
+
+![Alt text](images/overview.PNG)
+The top button toggles between the modeler mode and the simulation mode. The bottom 3 button are for defining process variables, initiate the database and download the diagram. The download button downloads a BPMN file, this can then be dragged and drop into any modeler with this extension. The process variables button opens a text field where the user can define process variables of the format ‘#[variable name] : [value]’, the variable names must be unique, and the value can be a number or a string, no quotes necessary. All variables must be separated with semicolon. 
+
+![some text](images/processVar.PNG) 
+
+The database button, shows a simple textfield with a simple JSON-database file, this file can be altered to what ever is needed, this will later be where the user give the details for their actual database for initiation. If the JSON format is followed, then the database will be initated.  Modelling can now take place.
+
+![somex](images/database.PNG)
+
+## Turtorial
+1. Use the small blue button in the bottom of the element menu to create a data task or open the element pallet by clicking on an element.
+
+![](images/newTask.PNG)
+2.	Click the dropdown menu button, in the bottom of the data task. This reveals the precondition and effect fields. Before writing make sure that the database if initiated, if not the parser will alert the user.
+
+3.	Now begin writing either the preconditions or the effects, if no precondition is defined, then the effects will immediately take hold when the task is executed. If the you want to access any of the attributes in any table, write select and press TAB, this will show every table, then write ‘.’ And press TAB again to see every attribute in the table. If you already know the attributes needed and their table write a normal SQL query, but it needs to be of the form SELECT A1,…,AN FROM R1,…,RN WHERE condition. If ambious statements are wirtten the parser will catch that not show the green outline, ambigoutiy is solved by using the format Table.Attribute.
+![](images/fullTask.PNG)
 
 ## Clone, Build and Run
 
