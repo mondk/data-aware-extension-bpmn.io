@@ -1,59 +1,22 @@
-# bpmn-js Token Simulation
+# Data-aware extension of bpmn.io
 
 [![CI](https://github.com/bpmn-io/bpmn-js-token-simulation/workflows/CI/badge.svg)](https://github.com/bpmn-io/bpmn-js-token-simulation/actions?query=workflow%3ACI)
 
-A BPMN 2.0 specification compliant token simulator, built as a [bpmn-js](https://github.com/bpmn-io/bpmn-js) extension.
+A tool for modelling data-aware BPMN with simulation capablities, inspired by delta-BPMN and built as a [bpmn-js](https://github.com/bpmn-io/bpmn-js) extension.
 
 [![Screencast](docs/screenshot.png)](https://bpmn-io.github.io/bpmn-js-token-simulation/modeler.html?e=1&pp=1)
 
 Try it on the [classic booking example](https://bpmn-io.github.io/bpmn-js-token-simulation/modeler.html?e=1&pp=1&diagram=https%3A%2F%2Fraw.githubusercontent.com%2Fbpmn-io%2Fbpmn-js-token-simulation%2Fmaster%2Ftest%2Fspec%2Fbooking.bpmn) or checkout the [full capability demo](https://bpmn-io.github.io/bpmn-js-token-simulation/modeler.html?e=1&pp=1&diagram=https%3A%2F%2Fraw.githubusercontent.com%2Fbpmn-io%2Fbpmn-js-token-simulation%2Fmaster%2Fexample%2Fresources%2Fall.bpmn).
 
 
-## Installation
 
-Install via [npm](http://npmjs.com/).
+## Tutorial
 
-```
-npm install bpmn-js-token-simulation
-```
+Upon startup all the standard bpmn.io functions are avaliable, the new addition the data task, is no usable untill
 
+## Clone, Build and Run
 
-## Usage
-
-Add as additional module to [bpmn-js](https://github.com/bpmn-io/bpmn-js).
-
-### Modeler
-
-```javascript
-import BpmnModeler from 'bpmn-js/lib/Modeler';
-import TokenSimulationModule from 'bpmn-js-token-simulation';
-
-const modeler = new BpmnModeler({
-  container: '#canvas',
-  additionalModules: [
-    TokenSimulationModule
-  ]
-});
-```
-
-### Viewer
-
-```javascript
-import BpmnViewer from 'bpmn-js/lib/NavigatedViewer';
-import TokenSimulationModule from 'bpmn-js-token-simulation/lib/viewer';
-
-const viewer = new BpmnViewer({
-  container: '#canvas',
-  additionalModules: [
-    TokenSimulationModule
-  ]
-});
-```
-
-
-## Build and Run
-
-Prepare the project by installing all dependencies:
+Start by cloning this project, then prepare the project by installing all dependencies using npm:
 
 ```sh
 npm install
@@ -68,16 +31,16 @@ npm run all
 # run the full development setup
 npm run dev
 
-# spin up the example
-npm run start:example
+# spin up the example with server
+npm run start:example2
 ```
 
 
 ## Additional Resources
 
-* [Making of token simulation](https://nikku.github.io/talks/2021-token-simulation) - The case for token simulation and how it builds on top of [bpmn-js](https://github.com/bpmn-io/bpmn-js)
-* [Token simulation internals](https://nikku.github.io/talks/2021-token-simulation-internals) - Detailed walk through the simulators core
-* [Camunda Modeler Token Simulation plug-in](https://github.com/camunda/camunda-modeler-token-simulation-plugin) - Token simulation for [Camunda](https://camunda.com/) users
+* [delta-BPMN](https://link.springer.com/chapter/10.1007/978-3-030-85469-0_13) - The framework used as the foundation for this extension.
+* [Token simulation](https://github.com/bpmn-io/bpmn-js-token-simulation) - More info about the simulator and its internals
+
 
 
 ## Licence
