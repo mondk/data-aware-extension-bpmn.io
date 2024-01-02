@@ -11,7 +11,9 @@ Upon startup all the standard bpmn.io functions are avaliable and layout is the 
 
 ![Alt text](images/overview.PNG)
 
-The top button toggles between the modeler mode and the simulation mode. The bottom 3 buttons are for defining process variables, initiating the database, and downloading the diagram. The download button downloads a BPMN file, which can then be dragged and dropped into any modeler with this extension. The process variables button opens a text field where the user can define process variables in the format ‘#[variable name] : [value]’. The variable names must be unique, and the value can be a number or a string; no quotes are necessary. All variables must be separated with a semicolon.
+The top button toggles between the modeler mode and the simulation mode. The bottom 3 buttons are for defining process variables, initiating the database, and downloading the diagram. The download button downloads a BPMN file, which can then be dragged and dropped into any modeler with this extension. 
+
+The process variables button opens a text field where the user can define process variables in the format ‘#[variable name] : [value]’. The variable names must be unique, and the value can be a number or a string; no quotes are necessary. All variables must be separated with a semicolon.
 
 <p align="left">
   <img src="images/processVar.PNG" width="300" alt="Some Text">
